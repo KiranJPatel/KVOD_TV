@@ -1,0 +1,23 @@
+#EXTM3U url-tvg="https://example.invalid/sample-guide.xml"
+#EXTINF:-1 tvg-id="sample.one" tvg-name="Sample One" tvg-chno="1" tvg-logo="" group-title="Sample General",Sample One HD
+https://example.invalid/sample/one.m3u8
+#EXTINF:-1 tvg-id="sample.two" tvg-chno="2" group-title="Sample General",Sample Two
+https://example.invalid/sample/two.m3u8
+#EXTINF:-1 tvg-id="sample.news" tvg-chno="3" group-title="Sample News, Business",Sample News
+https://example.invalid/sample/news.m3u8
+#EXTINF:-1 tvg-id="sample.sports" tvg-chno="4" group-title="Sample Sports",Sample Sports
+https://example.invalid/sample/sports.m3u8
+#EXTINF:-1 tvg-id="sample.kids" tvg-chno="5" group-title="Sample Kids",Sample Kids
+https://example.invalid/sample/kids.m3u8
+#EXTINF:-1 tvg-id="sample.music" tvg-chno="6" group-title="Sample Music",Sample Music
+https://example.invalid/sample/music.m3u8
+#EXTINF:-1 group-title="Sample Movies",Fictional Movie One (2020)
+https://example.invalid/sample/movies/one.mp4
+#EXTINF:-1 group-title="Sample Movies",Fictional Movie Two (2021)
+https://example.invalid/sample/movies/two.mp4
+#EXTINF:-1 group-title="Sample Series",Imaginary Show S01E01
+https://example.invalid/sample/series/show-s01e01.mp4
+#EXTINF:-1 group-title="Sample Series",Imaginary Show S01E02
+https://example.invalid/sample/series/show-s01e02.mp4
+#EXTINF:-1 group-title="Sample Series",Imaginary Show S02E01
+https://example.invalid/sample/series/show-s02e01.mp4
