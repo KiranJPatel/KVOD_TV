@@ -1,0 +1,19 @@
+# Known limitations and hardware-dependent behaviour
+- **Unverified build** (see README). Treat every claim as "intended behaviour".
+- Playback depends on stream format, codec, bitrate, network and device: Fire TV Stick Lite/older sticks may not decode HEVC/4K; MPEG-TS-over-HTTP quality varies; RTSP is supported through Media3 RTSP only for typical H.264/AAC streams. DRM is not configured.
+- Cleartext HTTP is enabled app-wide because many providers are HTTP-only; the UI warns. Anyone on the network path can read HTTP traffic and credentials sent over it.
+- M3U stream URLs (which can embed tokens) are stored in the app-private Room database in plain form to keep large catalogues fast; Xtream credentials are not (resolved at play time). The database is excluded from backup (`allowBackup=false`).
+- PIN is a convenience lock (salted, iterated SHA-256 with attempt throttling); the Owner PIN has no in-app recovery by design — clear app data.
+- XMLTV without offsets uses the EPG time zone setting (default: device zone). Re-import after changing it.
+- Guide windows keep yesterday → +8 days; the day selector never promises seven days if the feed has fewer.
+- Large guides (hundreds of thousands of programmes) import in batches inside one transaction; expect tens of seconds on a Fire TV Stick.
+- Focus: Compose lazy grids may reset focus after heavy list updates; restoration covers Live TV and Movies only.
+- The player releases decoders when the app stops; resuming re-tunes (live) or seeks to the last position (VOD).
+- Fire OS 5 (API 22) is below `minSdk`.
+- **Picture-in-picture** only works where the device reports the PiP feature; most Fire TV models do not, in which case Home simply leaves the app (playback is released).
+- **Notification controls**: Fire TV shows little or no notification UI; the media session still serves remote/assistant transport commands. Android TV 13+ asks for notification permission once.
+- **Voice search** needs an installed speech recognizer; Fire OS routes voice through Alexa, which cannot target this app's catalogue. The Voice button is hidden when no recognizer exists.
+- **Phone-assisted entry** serves plain HTTP on the local network for up to 5 minutes (once). Do not use on shared or public Wi-Fi.
+- **Metadata**: exact title matches only (no guessing), so heavily tagged or non-English names may stay without artwork; lookups are in-memory deduplicated per session (a miss is retried on the next app start).
+- **Backup restore** matches items by source name + title/group; renaming a source or playlist group before restoring prevents re-attachment (unmatched entries stay pending).
+- **Languages**: only English and Hindi ship. Strings assembled with templates (for example counts and times), import/network error messages and diagnostics stay in English. Hindi text needs a Devanagari-capable system font (present on current Fire OS and Android TV builds); the Hindi wording should be reviewed by a native speaker before release.

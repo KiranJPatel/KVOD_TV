@@ -1,0 +1,7 @@
+{
+  "executed": false,
+  "reason": "No Android SDK, Gradle, emulator or device was available when this report was produced.",
+  "summary": { "PASS": 0, "CONDITIONAL PASS": 0, "FAIL": 0, "NOT TESTED": "all" },
+  "schema": ["testId","asset","format","container","videoCodec","audioCodec","subtitleFormat","resolution","frameRate","bitrate","decoder","hardware","audioRoute","result","durationMs","droppedFrames","bufferingEvents","error","device","androidVersion","date"],
+  "tests": []
+}

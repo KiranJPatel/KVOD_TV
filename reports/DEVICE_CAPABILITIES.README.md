@@ -1,0 +1,1 @@
+DEVICE_CAPABILITIES.json is produced on the device (Settings → Privacy & diagnostics → Playback capability report) and saved to the app's files/reports folder. It cannot be generated off-device, so none is included.

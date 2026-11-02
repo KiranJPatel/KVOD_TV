@@ -1,0 +1,12 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="ok.one" group-title="Test",Good Channel
+https://example.invalid/ok.m3u8
+#EXTINF:-1 tvg-id="broken,Unterminated Quote
+https://example.invalid/broken.m3u8
+#EXTINF:-1,Missing URL follows
+#EXTINF:-1,Unsafe scheme
+file:///sdcard/secret.m3u8
+#EXTINF:-1,Duplicate
+https://example.invalid/dup.m3u8
+#EXTINF:-1,Duplicate
+https://example.invalid/dup.m3u8
