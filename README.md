@@ -3,12 +3,6 @@
 KVOD TV is a player for **Amazon Fire TV** and compatible **Android TV** devices. Kotlin, Jetpack Compose (Material 3, 10-foot UI), Media3 ExoPlayer, Room, DataStore, WorkManager, Hilt, OkHttp, Coil.
 It plays content **you are authorised to access**: nothing is bundled, and no channel is shown until you add a source (or explicitly load the fictitious demo data).
 
-> **What is new in 1.1.0:** see `docs/CHANGES_V1_1.md` (subtitle styles, volume / brightness, random play, playlists, six themes, KVOD TV branding). Themes: `docs/THEMES.md`.
->
-> **Verification status (please read).** This project was produced in an environment without the Android SDK, Gradle or network access.
-> **Nothing has been compiled, run or tested on a device.** The code was written carefully and statically checked for balanced syntax only.
-> Expect a first-build round of compile fixes (dependency versions, a few API signatures). See `docs/FEATURES.md` for what is implemented vs. untested.
-
 ## Requirements
 - Android Studio (latest stable), JDK 17, Android SDK 35 platform.
 - Device: Fire TV (Fire OS 6+, Android 7.1+) or Android TV (API 25+). Fire OS 5 devices (API 22) are not supported.
